@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neretitia</title>
+  <meta name="description" content="Apoyo en lactancia y acompañamiento postparto. Consultas a domicilio y online." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">NereTitia</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services" data-i18n="nav_services">Servicios</a></li>
+          <li><a href="#about" data-i18n="nav_about">Sobre mí</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-toggle" role="toolbar" aria-label="Language switch">
+        <button id="btn-en" class="lang active" data-lang="eus">EUS</button>
+        <button id="btn-es" class="lang" data-lang="es">ES</button>
+        <button id="btn-en" class="lang" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 data-i18n="hero_title">Apoyo en lactancia para familias</h1>
+          <p class="lead" data-i18n="hero_sub">Acompañamiento profesional, cercano y basado en la evidencia.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#contact" data-i18n="hero_cta">Pide cita</a>
+            <a class="btn ghost" href="#services" data-i18n="hero_cta2">Ver servicios</a>
+          </div>
+        </div>
+        <div class="hero-image" role="img" aria-label="Madre y bebé">
+          <!-- Sustituye por imagen propia en /images/ -->
+          <img src="images/hero-placeholder.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 data-i18n="services_title">Nuestros servicios</h2>
+        <p class="muted" data-i18n="services_sub">Sesiones presenciales y online, asesoramiento por bebés con dificultades, extracción y más.</p>
+
+        <div class="cards">
+          <article class="card">
+            <h3 data-i18n="svc_1_title">Consulta a domicilio</h3>
+            <p data-i18n="svc_1_desc">Evaluación práctica en casa, apoyo con la postura, succión y técnica de lactancia.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="svc_2_title">Consulta online</h3>
+            <p data-i18n="svc_2_desc">Sesión por vídeo para seguimiento y consejos prácticos.</p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="svc_3_title">Apoyo postparto</h3>
+            <p data-i18n="svc_3_desc">Acompañamiento emocional y recursos para los primeros meses.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="svc_4_title">Apoyo postparto</h3>
+            <li data-i18n="about_svc_4_point1">Consultas presenciales</li>
+            <li data-i18n="about_svc_4_point2">Consultas presenciales</li>
+            <li data-i18n="about_svc_4_point3">Consultas presenciales</li>
+            <li data-i18n="about_svc_4_point4">Consultas presenciales</li>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2 data-i18n="about_title">Sobre mí</h2>
+          <p data-i18n="about_desc">Soy asesora de lactancia certificada, con experiencia en acompañamiento a familias, apoyo en lactancia mixta y extracción. Trabajo presencial y online.</p>
+        </div>
+        <div class="about-image">
+          <img src="images/about-placeholder.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 data-i18n="contact_title">Contacto</h2>
+        <p data-i18n="contact_sub">Reserva una cita o cuéntanos tu caso.</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 data-i18n="contact_book">Reservas</h3>
+            <p><a href="mailto:contacto@tulactancia.ej" id="mailto">neretitia@gmail.com</a></p>
+            <p data-i18n="contact_phone">Tel: +34 664 471 740f</p>
+          </div>
+
+          <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+            <label for="name" data-i18n="form_name">Nombre</label>
+            <input id="name" name="name" required />
+
+            <label for="email" data-i18n="form_email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="message" data-i18n="form_message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button class="btn" type="submit" data-i18n="form_submit">Enviar</button>
+            <p id="formResult" class="muted" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> NereTitia · <span data-i18n="footer_rights">Todos los derechos reservados</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
